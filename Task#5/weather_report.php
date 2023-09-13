@@ -30,12 +30,12 @@
                     if(isset($_POST['convert'])){
                         $test = $_POST['test'];
                             
-                        if($test >= 30){
-                            $result = "It's warm!";
-                        } elseif($test < 20){
-                            $result = "It's cool!";
-                        } elseif($test < 10 ){
+                        if($test < 10){
                             $result = "It's freezing!";
+                        } elseif($test >= 10 && $test < 20){
+                            $result = "It's cool.";
+                        } elseif($test >= 20 ){
+                            $result = "It's warm.";
                         }
                     }
                 ?>
